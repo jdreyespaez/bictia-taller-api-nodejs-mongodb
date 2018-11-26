@@ -7,7 +7,7 @@ const routes = require('../rutas/personasRutas')
 
 const app = express()
 const config = require('./db')
-const PORT = 4000;
+const PORT = 8001;
 
 // CONEXIÓN A LA BD 
 mongoose.connect(config.DB, {useNewUrlParser: true}). then(
@@ -28,5 +28,5 @@ app.use(function(err, req, res, next){
 
 // Conexión a puerto
 app.listen(PORT, function(){
-    console.log(`Corriendo en el Puerto: ${PORT}`);
+    console.log(`Corriendo en el Puerto: ${PORT}`)
 })
